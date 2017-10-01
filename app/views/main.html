@@ -1,0 +1,72 @@
+ <ng-include
+      src="'views/shared/header.html'"
+      >
+</ng-include>
+
+ <div class="container full-w mar-neg-right-15">
+   <div class="row">
+     <div class="col-md-12 pad-0">
+        
+        <!-- Sidebar -->
+        <div class="col-md-3 pad-0 mar-0">
+          <div class="col-md-12 pad-0 mar-0">
+            <div class="row  mar-right-0 sidebar-head text-left pad-y-10 mar-top-0 min-height-66 min-width-363  col-sm-12" id="open-tickets">
+              <span class="font-white pad-10 font-22 font-b ">
+                <label class="mar-top-13 font-b" >Open Tickets ({{ticketNum}})</label> 
+              </span>
+              <span class="glyphicon glyphicon-triangle-bottom" id="arrow" ng-click="display()" ></span>
+            </div>
+
+
+            <div class="row tickets  mar-right-0 p-rel minh-350" ng-hide="show">
+            <div class="row tickets mar-right-0 pad-10 pad-left-10 border-bot-gray" >
+              <label id="day">Today</label>
+            </div>
+              <div class="col-md-12 pad-0 ">
+                <div class="col-md-12 mar-y-20 border-bot-gray" ng-repeat="t in ticket" id="ticketData"  >
+                  <div class="col pad-5 ticket-list" view-data link="/ticket/{{t.ticketId}}"  did="{{t}}"  >
+                    <div class="col-md-8 " >
+                      <span class="font-12 margin-left-18" >
+                       {{t.issue}}
+                      </span>
+                    </div>
+                    <div class="col-md-4" >
+                      <span class="font-12">
+                        {{t.time}}
+                      </span>
+                    </div>
+                    <div class="col-md-12 pad-y-10 " >
+                      <label class="label label-danger font-16 margin-left-18" ng-model="(t.tName)" color-data  cls={{t.tName}}>
+                        {{t.tName }}
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Sidebar Ends -->
+
+         <!-- Main  -->
+        <div class="col-md-9 pad-15  pad-right-0 mar-0 text-center main-content-container">
+          <div class="col-md-12 full-w main-content minh-550">
+              <div class="col-md-12 pad-10" id="data-holder" >
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <h2>Dashboard</h2>  
+                    </div>
+                  </div>
+              </div>
+
+
+              </div>
+          </div>
+        </div>
+        <!-- Main Ends -->
+     </div>
+    
+   </div>
+ </div>
