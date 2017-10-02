@@ -8,16 +8,18 @@
  *
  * Main module of the application.
  */
-angular
-  .module('poolprosApp', [
+
+var app = angular.module('poolprosApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+    'ngTouch',
+    'ngCookies',
+  ]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
