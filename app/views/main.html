@@ -55,51 +55,590 @@
           <!-- Filter -->
 
           <div class="col-md-12 full-w main-content minh-550 pad-0">
-              <div class="col-md-12 pad-0" id="data-holder" >
+              <div class="col-md-12 pad-0  pady-0" id="filter-holder" >
                   <div class="row   " >
                     <div class="top-filter col-md-12 text-center mar-right-0 pad-right-0">
                       <img src="../../images/filter.jpg"  class="full-w">
-                      <div class="col-md-12 pad-10 mar-top-0 mar-neg-top-60 pad-x-0">
-                        <div class="col-md-10  col-md-offset-1 pad-10 mar-top-0 filter-controls">
-                          <!-- Filter Result -->
-                          <div class="col-md-3 pad-0 text-right">
-                            <label>
-                              6 dealers in 22
-                            </label>
-                          </div>
-                          
-                            <div class="col-md-2 pad-0 text-center">
+                        <!-- Filter Controls -->
+                        <div class="col-md-12 pad-10 mar-top-0 mar-neg-top-60 pad-x-0">
+                          <div class="col-md-10  col-md-offset-1 pad-10 mar-top-0 filter-controls">
+
+                            <!-- Result Counts -->
+                            <div class="col-md-3 pad-0 text-right filter-results-count">
                               <label>
-                                Filter Results
-                              </label>          
+                                6 dealers in 22
+                              </label>
                             </div>
-                            <div class="col-md-7 pad-0 pad-left mar-neg-top-5">
-                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5" >
-                                <input type="checkbox" name="filter">
+                            
+                            <div class="col-md-2 pad-0 text-center filter-results-count-label">
+                                <label>
+                                  Filter Results
+                                </label>          
+                            </div>
+                            <!-- Result Counts Ends-->
+
+                            <!-- Filter Options -->
+                            <div class="col-md-7 pad-0 pad-left mar-neg-top-3 filter-selection">
+                              <!-- Filter Selection -->
+                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5 filter-selection-opt" >
+                                <input type="checkbox" name="filter" class="mar-right-10">
                                 Service          
                               </div>
-                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5">
-                                <input type="checkbox" name="filter">
+                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5 filter-selection-opt">
+                                <input type="checkbox" name="filter" class="mar-right-10">
                                 Installation          
                               </div>
-                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5">
-                                <input type="checkbox" name="filter">
+                              <div class="col-md-2 pad-0 mar-left-15 pad-x-5 filter-selection-opt">
+                                <input type="checkbox" name="filter" class="mar-right-10">
                                 Residential          
                               </div>
-                              <div class="col-md-3 pad-0 mar-left-15 pad-left-5">
-                                <input type="checkbox" name="filter">
+                              <div class="col-md-3 pad-0 mar-left-15 pad-x-5 filter-selection-opt">
+                                <input type="checkbox" name="filter" class="mar-right-10">
                                 Commercial            
                                 <a href="#">
                                   <i class="fa fa-question-circle"></i>
                                 </a>
                               </div>
-                            </div>                            
+                              <!-- Filter Selection Ends -->
+                            </div>  
+                            <!-- Filter Options Ends -->
+                          </div>
                         </div>
-                    </div>
                     
                   </div>
               </div>
 
+              <div class="col-md-12 pad-0  pady-0" id="filter-holder-2" >
+                  <div class="row " >
+                    <div class="top-filter col-md-12 text-center mar-right-0 pad-right-0  pady-0">
+                        <div class="col-md-12 pad-10 mar-top-5 pad-x-0 pad-y-0 mar-y-0 pady-0">
+                          <div class="col-md-10  col-md-offset-1 pad-10 mar-top-0 filter-result-container pad-x-0">
+
+                            <!-- <div class="col-md-12  col-md-offset-1 pad-10 mar-top-0 filter-result-container"> -->
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 filter-result text-center pad-left-0 pad-y-20 pad-top-0">
+                                
+                              <div class="col-md-12 filter-result-content pad-x-10">
+                                  
+                                  <div class="filter-result-head pad-y-10">
+                                    <label>
+                                      Aqua Expert
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="filter-result-contact pad-y-10">
+                                    <label class="contact-label">
+                                      <span class="phone-wrap">
+                                        <i class="icon fa fa-phone"></i>  
+                                      </span>
+                                      1.888.888.8888
+                                    </label>
+                                  </div>
+
+                                  <div class=" text-center filter-result-contact-top-label pad-y-10">
+                                    
+                                    <p>
+                                      Can't talk now? Click here below to send an email.
+                                    </p>
+                                  </div>
+                                  
+                                  <div class=" text-center filter-result-contact-email pad-y-10 mar-bot-15">
+                                     <a href="#" class="mar-right-0 box-anchor">
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      Contact this Pro
+                                    </a>
+                                  </div>
+
+                                  <div class=" text-center filter-result-business-hours pad-y-10 mar-y-25">
+                                    <h4>Business Hours</h4>
+                                    <ul class="text-center pad-left-0">
+                                      <li>
+                                        Weekdays 7:00 AM - 7:00 PM
+                                      </li>
+                                      <li>
+                                        Saturday 7:00 AM - 3:00 PM
+                                      </li>
+                                        Sunday CLOSED
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </div>  
+                              
+                              <div class="col-md-12 text-center filter-result-categories pad-y-10 mar-y-25 mar-bot-0">
+                                
+                                <div class="row pad-10 text-left">
+                                  <div class="col-md-6">
+                                    <span class="span-ct">
+                                      <i class="fa fa-star fa-spin"></i>
+                                      Installation Pro
+                                    </span>
+                                  </div>
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-cog fa-spin"></i>
+                                      Service Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-home"></i>
+                                      Residential Pro
+                                    </span>
+                                  </div> 
+
+                                   <div class="col-md-6 text-left">
+                                    <span class="span-ct">
+                                      <i class="fa fa-users"></i>
+                                      Commercial Pro
+                                    </span>
+                                  </div> 
+                                </div>
+
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                    
+                  </div>
+              </div>
+
+              <!-- <div class="col-md-12 pad-0">
+                <div class="row">
+                  <div class="col-md-12 pad-x-0">
+                    <div class="col-md-12 pad-10">
+                      <div class="col-md-10  col-md-offset-1 pad-10 mar-top-0 filter-result-container">
+                          <div class="col-md-4 filter-result text-center">
+                            1
+                          </div>
+                          <div class="col-md-4 filter-result text-center">
+                            2
+                          </div>
+                          <div class="col-md-4 filter-result text-center">
+                            3
+                          </div>
+                      </div>
+                    </div> 
+                  </div> 
+                </div>
+              </div> -->
 
               </div>
           </div>
