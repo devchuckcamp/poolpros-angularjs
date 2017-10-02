@@ -500,6 +500,12 @@ body { padding-top: 90px; }
 .mar-neg-right-30{
   margin-right: -30px!important;
 }
+.mar-neg-top-5{
+  margin-top: -5px!important;
+}
+.mar-neg-top-10{
+  margin-top: -10px!important;
+}
 .mar-neg-top-50{
   margin-top: -50px!important;
 }
@@ -733,4 +739,17 @@ ul{
 }
 .filter-controls{
   background-color: #F6F6F6!important;
+  input[type="checkbox"]{
+    -webkit-appearance: button;
+    width: 18px;
+    height: 18px;
+    &:checked{
+    
+    background: #fafafa;
+    background-color: azure;
+    border: 6px solid #29579b;
+    border-radius: 5px;
+   
+  }
+  }
 }
