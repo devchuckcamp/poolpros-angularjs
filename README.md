@@ -1,45 +1,39 @@
-# Pool Pros
+# Pool Pro.
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.16.0.
+
+## My Node version when I started this. Also this works on Node version 6.11.+
+	version: 7.8.0
+	npm: 4.2.0
 
 ## Install yo, grunt-cli and bower globally for all users on your machine
 	sudo npm install -g yo grunt-cli bower
 	sudo npm install -g generator-angular generator-karma
 	sudo npm install -g generator-angular generator-karma
 
+## Install the compass gems from via ruby
+	We will need compass - https://github.com/Compass/compass
+	Install compass
+	  sudo apt-get install ruby-compass
+	  sudo gem install compass
+
 ## Clone this project
-	git clone git@github.com:danevincentpainaga/dane.git
-	cd dane/
+	git clone git@github.com:devchuckcamp/poolpros-angularjs.git
+	cd poolpros-angularjs/
 	npm install
 	grunt serve	
 
-## Node
-	version: 7.8.0
-	npm: 4.2.0
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
+	npm install grunt-karma karma-phantomjs-launcher karma-jasmine --save-dev
+	Running `grunt test` will run the unit tests with karma.
 
-Running `grunt test` will run the unit tests with karma.
 
 
-## In case of error like 'concurrent compass' after running 'grunt serve'
 
-	Just install the following gems
-	Install compass
-	  sudo apt-get install ruby-compass
-	  sudo gem install compass
-
-## User Guide
-   For demo purposes you can use any of the account:
-   
-   username:dane
-   password:password
-
-   username:chuckie
-   password:password
 
