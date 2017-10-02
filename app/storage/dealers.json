@@ -196,6 +196,33 @@
                     "Service Pro"
                 ]
             }
+        },{
+            "data": {
+                "companyID": 401923,
+                "name": "Talent Pool",
+                "phone1": "1-888-797-3463",
+                "email": "info@talentpool.com",
+                "addressLine1": "1234 Some Street",
+                "addressLine2": "",
+                "city": "Charlotte",
+                "state": "North Carolina",
+                "country": "US",
+                "zipcode": "28205",
+                "weekHours": {
+                    "mon": "7:00am - 7:00pm",
+                    "tue": "7:00am - 7:00pm",
+                    "wed": "7:00am - 7:00pm",
+                    "thu": "7:00am - 7:00pm",
+                    "fri": "7:00am - 7:00pm",
+                    "sat": "7:00am - 7:00pm",
+                    "sun": "7:00am - 7:00pm"
+                },
+                "certifications": [
+                    "Installation Pro",
+                    "Commercial Pro",
+                    "Service Pro"
+                ]
+            }
         }
     ]
 }
