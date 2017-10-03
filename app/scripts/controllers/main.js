@@ -8,18 +8,15 @@
  * # MainCtrl
  * Controller of the poolprosApp
  */
-
-
-app.controller('MainCtrl', function ($scope, $filter, $http, $routeParams, $location) {
+app.controller('MainCtrl', function ($scope, $filter, $http ) {
 
 	$scope.dealers = [];
 	$scope.longDealerName = '';
 	$scope.filterResultsCount = 0;
-	$scope.proType = [{name:'Shrek', genre:'Comedy'},
-                     {name:'Die Hard', genre:'Action'},
-                     {name:'The Godfather', genre:'Drama'}];
+	$scope.onLoadDealersCount = 0;
+	$scope.hasFilter = false;
 
-	 $scope.arrangeHours= function(day,index){
+	 $scope.arrangeHours= function(day){
 
 	 	//console.log(index);
 	 	//console.log(day);
@@ -28,7 +25,7 @@ app.controller('MainCtrl', function ($scope, $filter, $http, $routeParams, $loca
 
 	$scope.isCertified = function(certifications, cert){
 		var found = false;
-		angular.forEach(certifications, function(value, key) {
+		angular.forEach(certifications, function(value) {
 		  //this.push(key + ': ' + value);\
 		  //console.log(value.data.name.length);
 		  // if(value.data.name.length > 20){
@@ -55,13 +52,10 @@ app.controller('MainCtrl', function ($scope, $filter, $http, $routeParams, $loca
 			return 'l-height-85';
 		}
 		return '';
-	}
-	
-	$scope.seeIndex = function(obj){
-		//console.log(obj,'index');
 	};
+	
 	$scope.checkName = function(obj){
-		angular.forEach(obj, function(value, key) {
+		angular.forEach(obj, function(value) {
 		  //this.push(key + ': ' + value);\
 		  //console.log(value.data.name.length);
 		  if(value.data.name.length > 20){
@@ -80,6 +74,7 @@ app.controller('MainCtrl', function ($scope, $filter, $http, $routeParams, $loca
 	        	var dealersList = response.data.dealers;
 
 	        	$scope.checkName(dealersList);
+	        	$scope.onLoadDealersCount = dealersList.length;
 	        	$scope.filterResultsCount = dealersList.length;
 	        	$scope.dealers = dealersList;
 	        	
@@ -110,17 +105,19 @@ app.controller('MainCtrl', function ($scope, $filter, $http, $routeParams, $loca
 	$scope.getDealers();
 
 	
-	$scope.filter = {}
+	$scope.model = {
+		"service":false,
+		"installation":false,
+		"residential":false,
+		"commercial":false,
+	};
+	console.log($scope.model);
 	$scope.filterDealers = function(model, name){
 	  // Display the wine if
-	  $scope.filter
+	  //$scope.filter;
 
-	  if(	model.service 
-	  		|| 	model.installation 
-			|| 	model.residential 
-			||	model.commercial 
-	  	){
-
+	  if(	model.service || 	model.installation || 	model.residential ||	model.commercial ){
+	  	$scope.hasFilter = true;
 	  	var filteredDealers = $scope.dealers.filter(function(dealer){
 		  return dealer.data.certifications.indexOf(name) > -1;
 		});

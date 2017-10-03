@@ -19,7 +19,7 @@ var app = angular.module('poolprosApp', [
     'ngCookies',
   ]);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -34,4 +34,7 @@ app.config(function ($routeProvider) {
       .otherwise({
         redirectTo: '/'
       });
+      $locationProvider.hashPrefix('');
+      $locationProvider.html5Mode(true);
+      $locationProvider.hashPrefix('');
   });
