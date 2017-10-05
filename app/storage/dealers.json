@@ -198,29 +198,27 @@
             }
         },{
             "data": {
-                "companyID": 401923,
-                "name": "Talent Pool",
-                "phone1": "1-888-797-3463",
-                "email": "info@talentpool.com",
+                "companyID": 401924,
+                "name": "Pool Drone",
+                "phone1": "1-888-797-3421",
+                "email": "info@pooldrone.com",
                 "addressLine1": "1234 Some Street",
                 "addressLine2": "",
-                "city": "Charlotte",
-                "state": "North Carolina",
+                "city": "Kansas",
+                "state": "Texas",
                 "country": "US",
-                "zipcode": "28205",
+                "zipcode": "77077",
                 "weekHours": {
-                    "mon": "7:00am - 7:00pm",
-                    "tue": "7:00am - 7:00pm",
-                    "wed": "7:00am - 7:00pm",
-                    "thu": "7:00am - 7:00pm",
-                    "fri": "7:00am - 7:00pm",
-                    "sat": "7:00am - 7:00pm",
-                    "sun": "7:00am - 7:00pm"
+                    "mon": "9:00am - 9:00pm",
+                    "tue": "9:00am - 9:00pm",
+                    "wed": "9:00am - 9:00pm",
+                    "thu": "9:00am - 9:00pm",
+                    "fri": "9:00am - 9:00pm",
+                    "sat": "9:00am - 9:00pm",
+                    "sun": "9:00am - 9:00pm"
                 },
                 "certifications": [
-                    "Installation Pro",
-                    "Commercial Pro",
-                    "Service Pro"
+                    "Installation Pro"
                 ]
             }
         }

@@ -1,10 +1,10 @@
 <nav class="navbar navbar-default navbar-fixed-top border-bot-hr-2" >
-	  <div class="container-fluid text-right top-header-navigation pad-y-10 pad-x-50 hidden-sm">
+	  <div class="container-fluid text-right top-header-navigation pad-y-10 pad-x-50 visible-sm visible-md visible-lg">
       
         <a href="#" class="mar-right-35">
           Dealers and Distributors
         </a>
-        <a href="#" class="mar-right-60">
+        <a href="#" class="mar-right-60 mar-r-sm-0">
           Commercial Service
           <i class="fa fa-sign-out" aria-hidden="true"></i>           
         </a>
@@ -12,65 +12,121 @@
     </div>
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header col-md-3 col-sm-3 pad-x-sm-0">
         
-        <a class="mar-left-60 mar-right-50 pad-x-40" href="/">
-          <img class="mar-top-25 mar-bot-25" src="../../images/logo.png">
+        <a class=" mar-left-35 mar-right-50 pad-x-40 pad-x-sm-0 mar-x-sm-0" href="/">
+          <img class="mar-top-25 mar-bot-25 logo-nav-img" src="../../images/logo.png">
         </a>
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <a href="#" class="mar-right-0 pool-finder pool-finder-mobile visible-xs">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+              Find a Pro
+        </a>
+
+        <button type="button" class="navbar-toggle collapsed" id="menu-top-navbar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" ng-click="openTapNav()">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar icon-bar-md"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
 
-      <ul class="nav navbar-nav navbar-right mar-top-15 mar-right-55 pad-x-40 hidden-sm hidden-xs">
-          <li>
-            <a href="#">Polls & Spas</a> 
-          </li>
-          <li>
-            <a href="#">Supplies</a>            
-          </li>
-          <li>
-            <a href="#">Resources</a>            
-          </li>
-          <li >
-            <a  href="#">Service</a>            
-          </li>
-          <li class="mar-left-10 ">
+      <ul id="collapse" class="col-md-8 col-sm-9 nav navbar-nav navbar-right mar-top-15 mar-right-50 pad-x-40">
+          <li class="mar-left-15 pull-right pool-finder-btn">
             <a href="#" class="mar-right-0 pool-finder">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               Find a Pool Pro
             </a>
           </li>
+          <li class="pull-right sm-w-19">
+            <a href="#" class="mar-right-0 mar-r-sm-5 pad-right-25 pad-right-sm-0 pad-left-sm-0 ">Services</a> 
+          </li>
+          <li class="pull-right sm-w-33">
+            <a href="#" class="mar-right-0 mar-r-sm-5 pad-right-20 pad-right-sm-0 pad-left-sm-0">Resources</a>            
+          </li>
+          <li class="pull-right sm-w-19">
+            <a href="#" class="mar-right-0 mar-r-sm-5 pad-right-20 pad-right-sm-0 pad-left-sm-0">Supplies</a>            
+          </li>
+          <li class="pull-right sm-w-33" >
+            <a  href="#" class="mar-right-0 mar-r-sm-5 pad-right-20 pad-right-sm-0 pad-left-sm-0">Polls & Spas</a>            
+          </li>
+          
       </ul>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <img ng-src="{{userLogged.image}}" class="img-circle" id="user-pic">
-              <label>{{ userLogged.name }}</label><span class="caret"></span>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-class="isTapNavOpen ? 'in' : ''">
+
+        <ul id="collapse-mobile" class="nav navbar-nav navbar-right mar-top-0">
+
+          <li class="text-right bg-fff pad-x-24">
+            <a href="#" class="close-x-a mar-right-0 a-close-x" ng-click="closeTapNav()">
+              <i class="fa fa-close"></i> 
+            </a>
+          </li>
+          <li class="text-center bg-fff mar-bot-10">
+            <h3 class="mar-right-0 mar-y-0 pad-bot-25">Menu</h3>
+          </li>
+
+          <li>
+
+            <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+              Polls & Spas
+              <i class="fa fa-chevron-right pull-right"></i>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="#">
-                  <span class="glyphicon glyphicon-plus"></span> Account
-                </a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li id="logout">
-                <a href="#" ng-click="logout()">
-                  <span class="glyphicon glyphicon-log-out"></span> Logout
-                </a>
+                
               </li>
             </ul>
           </li>
+
+          <li>
+
+            <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+              Supplies
+              <i class="fa fa-chevron-right pull-right"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                
+              </li>
+            </ul>         
+          </li>
+
+          <li>
+
+            <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+              Resources
+              <i class="fa fa-chevron-right pull-right"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                
+              </li>
+            </ul>          
+          </li>
+
+          <li class="dropdown">
+
+            <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+              Service
+              <i class="fa fa-chevron-right pull-right"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                
+              </li>
+            </ul>
+          </li>            
+
+          <!-- <li class="mar-left-10 ">
+            <a href="#" class="mar-right-0 pool-finder">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              Find a Pool Pro
+            </a>
+          </li> -->
         </ul>
-      </div> -->
+      </div>
       <!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

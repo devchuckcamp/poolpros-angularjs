@@ -15,22 +15,59 @@ app.controller('MainCtrl', function ($scope, $filter, $http ) {
 	$scope.filterResultsCount = 0;
 	$scope.onLoadDealersCount = 0;
 	$scope.hasFilter = false;
+	$scope.sendTo = {};
+	$scope.isTapNavOpen = false;
+	$scope.isMobileFilterOpen = false;
+	$scope.nameField = "";
+	$scope.phoneField = "";
+	$scope.emailField = "";
+	$scope.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		
+	$scope.inputs = [
+		{
+			"name":"name",
+			"value":$scope.nameField,
+			"type":"text",
+			"isRequired":true,
+			"isValid":false
+		},
+		{
+			"name":"tel",
+			"value":$scope.phoneField,
+			"type":"number",
+			"isRequired":true,
+			"isValid":false
+		},
+		{
+			"name":"email",
+			"value":$scope.emailField,
+			"type":"email",
+			"isRequired":true,
+			"isValid":false
+		}
+	];
 
-	 $scope.arrangeHours= function(day){
+	$scope.openTapNav = function(){
+		$scope.isTapNavOpen = true;
+	};
+	$scope.closeTapNav = function(){
+		$scope.isTapNavOpen = false;
+	};
+	$scope.toggleMobileFilter = function(){
+		if($scope.isMobileFilterOpen){
+			$scope.isMobileFilterOpen = false;
+		} else {
+			$scope.isMobileFilterOpen = true;
+		}
+	};
 
-	 	//console.log(index);
-	 	//console.log(day);
+	$scope.arrangeHours= function(day){
 	 	return day;	
 	 };
 
 	$scope.isCertified = function(certifications, cert){
 		var found = false;
 		angular.forEach(certifications, function(value) {
-		  //this.push(key + ': ' + value);\
-		  //console.log(value.data.name.length);
-		  // if(value.data.name.length > 20){
-		  // 	$scope.longDealerName = 'longDealerName';
-		  // }
 
 		  if(value === cert){
 		  	//console.log(value + ' Found');
@@ -56,8 +93,6 @@ app.controller('MainCtrl', function ($scope, $filter, $http ) {
 	
 	$scope.checkName = function(obj){
 		angular.forEach(obj, function(value) {
-		  //this.push(key + ': ' + value);\
-		  //console.log(value.data.name.length);
 		  if(value.data.name.length > 20){
 		  	$scope.longDealerName = 'longDealerName';
 		  }
@@ -78,25 +113,6 @@ app.controller('MainCtrl', function ($scope, $filter, $http ) {
 	        	$scope.filterResultsCount = dealersList.length;
 	        	$scope.dealers = dealersList;
 	        	
-	        	//return $scope.dealers;
-	        	//console.log(response.data.id==1);
-	        	//var conversation = response.data.ticket.find(ticket => ticket.id == $routeParams.ticketID);
-		   		// // console.log(conversation);
-		   		// $scope.ticketData = {
-		   		// 	name: $scope.userLogged.username,
-		   		// 	mobile: $scope.userLogged.mobile,
-		   		// 	email: $scope.userLogged.email,
-		   		// 	issue:conversation.issue,
-		   		// 	status:conversation.status,
-		   		// 	assignedTo:conversation.assign_to,
-		   		// 	department:conversation.department,
-		   		// 	healthTopic:conversation.help_topic,
-		   		// };
-		   		
-
-		   		// $scope.tickets.push(conversation);
-		   		// $scope.loadedMsg = conversation.message;
-
 		   },function (error){
 		   		console.log(error);
 		   });
@@ -111,10 +127,9 @@ app.controller('MainCtrl', function ($scope, $filter, $http ) {
 		"residential":false,
 		"commercial":false,
 	};
-	console.log($scope.model);
+	
+	
 	$scope.filterDealers = function(model, name){
-	  // Display the wine if
-	  //$scope.filter;
 
 	  if(	model.service || 	model.installation || 	model.residential ||	model.commercial ){
 	  	$scope.hasFilter = true;
@@ -125,31 +140,45 @@ app.controller('MainCtrl', function ($scope, $filter, $http ) {
 	  	$scope.filterResultsCount = filteredDealers.length;
 	  	$scope.dealers = filteredDealers;
 	  }else{
+	  	$scope.filterResultsCount = $scope.onLoadDealersCount;
 	  	$scope.getDealers();
 	  }
 	  
-	  console.log(model);
-	  console.log($scope.dealers );
-
 	};
 
+	// Email
+	$scope.sentTo = function(data){
+		$scope.sendTo = data;
+	}
 
-	
+	// Form Validation
+	$scope.isFieldValid = function(fieldname,val,required,type){
 
+		var isValid = false;
 
+		var selectedField = $scope.inputs.filter(function(field){
+		  return (field.name.indexOf(fieldname) > -1 );
+		});
+		
+		selectedField.value = val;
+		selectedField.isRequired = required;
+		selectedField.type = type;
+		selectedField.name = fieldname;
 
-	
+		var name = selectedField.name;
+		var value = selectedField.value;
+		var type = selectedField.type;
+		var required = selectedField.isRequired;
 
+		if(required && value !=='' && type === 'text'){
+			isValid = true;
+		}  else if(required && value !=='' && type === 'number'){
+			isValid = true;
+		}  else if(required && value !=='' && type === 'email' && $scope.emailRegex.test(value) ){
+			isValid = true;
+		} 
 
+		return isValid;
+	}
 
 });
-
-// app.factory('DealerService', function($http){
-
-	
-// 		getDealers: function(){
-			
-// 		}
-
-
-// });
