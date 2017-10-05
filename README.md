@@ -34,7 +34,7 @@ Default port is on :9000
 	npm install grunt-karma karma-phantomjs-launcher karma-jasmine --save-dev
 	Running `grunt test` will run the unit tests with karma.
 
-##Running Build file in dist/ folder
+## Running Build file in dist/ folder
 
 Run `grunt serve:dist`
 	If your not getting the data from storage/dealers.json
