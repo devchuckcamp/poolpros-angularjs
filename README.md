@@ -27,8 +27,8 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
-
+Run `grunt build` for building and `grunt serve` for preview.
+Default port is on :9000
 ## Testing
 	npm install grunt-karma karma-phantomjs-launcher karma-jasmine --save-dev
 	Running `grunt test` will run the unit tests with karma.
