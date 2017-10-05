@@ -29,9 +29,18 @@ version 0.16.0.
 
 Run `grunt build` for building and `grunt serve` for preview.
 Default port is on :9000
+
 ## Testing
 	npm install grunt-karma karma-phantomjs-launcher karma-jasmine --save-dev
 	Running `grunt test` will run the unit tests with karma.
+
+##Running Build file in dist/ folder
+
+Run `grunt serve:dist`
+	If your not getting the data from storage/dealers.json
+	Just Copy storage/dealers.json to dist/ then refresh your browser.
+	Note: No need to run `grunt serve:dist` after copying the folder. 
+
 
 
 
